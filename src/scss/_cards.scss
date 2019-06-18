@@ -1,0 +1,31 @@
+.container {
+  width: $middle_width;
+  margin: 50px auto;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.albums {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+.album_pic {
+  margin-top: 50px;
+  width: $img_hw + 30px;
+  height: $img_hw + 100px;
+  background-color: $black;
+  text-align: center;
+  img {
+    margin: 10px 0;
+    height: $img_hw;
+    width: $img_hw;
+  }
+  .specifics {
+    color: white;
+    padding: 0;
+    h4 {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+header {
+  width: 100%;
+  height: $height70;
+  background-color: $black;
+};
+
+.box {
+  width: $middle_width;
+  margin: 0 auto;
+  img {
+    max-width: $height70;
+  };
+};

@@ -1,19 +1,48 @@
-Stampare a schermo una decina di dischi musicali in due modi diversi:
+<!-- Stampare a schermo una decina di dischi musicali in due modi diversi:
 1 - Solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi.
 2 - Attraverso l’utilizzo di AJAX: al caricamento della pagina ajax chiederà attraverso una chiamata i dischi a php e li stamperà attraverso handlebars.
-Utilizzare: Html, Sass, JS, jQuery, handlebars, Php
+Utilizzare: Html, Sass, JS, jQuery, handlebars, Php -->
 
-<?php
+<!-- http://localhost:8888/Boolean/18.06.19_php_dischi/ -->
+
+<?
 include "data.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Best Albums</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="public/js/app.js" charset="utf-8"></script>
   </head>
   <body>
 
+    <header>
+      <div class="box">
+        <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
+      </div>
+    </header>
+
+    <div class="container">
+      <? foreach ($albums as $key => $print) { ?>
+      <div class="albums">
+        <div class="album_pic">
+          <img src="<? echo $print["pic"]; ?>">
+          <div class="specifics">
+            <h4><? echo $print["title"]; ?></h4>
+            <p><? echo $print["artist"]; ?></p>
+            <small><? echo $print["year"]; ?></small>
+          </div>
+        </div>
+      </div>
+      <? };
+      ?>
+    </div>
   </body>
 </html>
