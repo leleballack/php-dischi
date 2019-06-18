@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+fontawesome-free
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
