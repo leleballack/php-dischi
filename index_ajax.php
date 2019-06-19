@@ -19,10 +19,17 @@
     <div class="container">
     </div>
 
+    <div class="find_artist">
+
+    </div>
+    <div class="find_date">
+
+    </div>
+
     <script id="entry_template" type="text/x-handlebars-template">
       <div class="albums">
         <div class="album_pic">
-          <img src="{{ pic }}">
+          <img src="{{ cover }}">
           <div class="specifics">
             <h4>{{ title }}</h4>
             <p>{{ artist }}</p>

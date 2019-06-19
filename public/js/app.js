@@ -10712,24 +10712,28 @@ $(function () {
     "url": "http://localhost:8888/Boolean/18.06.19_php_dischi/data.php",
     "method": "GET",
     "success": function success(data) {
-      var list_albums = JSON.parse(data);
-
-      for (var d = 0; d < list_albums.length; d++) {
-        var album = list_albums[d];
-        var single = {
-          "pic": album.pic,
-          "title": album.title,
-          "artist": album.artist,
-          "year": album.year
-        };
-        var html = template(single);
-        $(".container").append(html);
-      }
+      print_albums(data);
     },
     "error": function error() {
       alert("There is an error!");
     }
   });
+
+  function print_albums(dischi) {
+    var list_albums = JSON.parse(dischi);
+
+    for (var d = 0; d < list_albums.length; d++) {
+      var album = list_albums[d];
+      var single = {
+        "cover": album.pic,
+        "title": album.title,
+        "artist": album.artist,
+        "year": album.year
+      };
+      var html = template(single);
+      $(".container").append(html);
+    }
+  }
 });
 
 /***/ }),
