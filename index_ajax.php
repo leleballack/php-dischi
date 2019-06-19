@@ -17,16 +17,21 @@
       </div>
     </header>
     <div class="container">
+      <div class="find_details">
+        <select class="name" name="artist">
+          <option disabled selected hidden value="">Select Artist</option>
+        </select>
+        <button type="submit" name="button">Search</button>
+        <select class="date" name="year">
+          <option disabled selected hidden value="">Select Date</option>
+        </select>
+        <button type="submit" name="button">Search</button>
+      </div>
     </div>
 
-    <div class="find_artist">
 
-    </div>
-    <div class="find_date">
 
-    </div>
-
-    <script id="entry_template" type="text/x-handlebars-template">
+    <script id="album_template" type="text/x-handlebars-template">
       <div class="albums">
         <div class="album_pic">
           <img src="{{ cover }}">
@@ -38,6 +43,15 @@
         </div>
       </div>
     </script>
+
+    <script id="artist_template" type="text/x-handlebars-template">
+      <option value={{artist}}>{{artist}}</option>
+    </script>
+
+    <script id="year_template" type="text/x-handlebars-template">
+      <option value={{year}}>{{year}}</option>
+    </script>
+
 
   </body>
 </html>

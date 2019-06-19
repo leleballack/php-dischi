@@ -25,6 +25,15 @@ header {
   cursor: pointer;
 }
 
+.find_details select {
+  height: 30px;
+}
+
+.find_details button {
+  height: 30px;
+  margin: 0 10px;
+}
+
 .container {
   width: 70%;
   margin: 50px auto;
