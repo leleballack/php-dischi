@@ -1,27 +1,27 @@
 .container {
   width: $middle_width;
-  margin: 50px auto;
+  margin: $space_10*5 auto;
   font-family: 'Roboto', sans-serif;
-  text-align: center;
+  text-align: $pos_center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: $pos_center;
 }
 
 .albums {
   display: inline-block;
-  margin: 0 25px;
+  margin: 0 $space_10*2.5;
 }
 
 .album_pic {
-  margin-top: 50px;
-  width: $img_hw + 30px;
-  height: $img_hw + 100px;
+  margin-top: $space_10*5;
+  width: $img_hw + $space_10*3;
+  height: $img_hw + $space_10*10;
   background-color: $black;
-  text-align: center;
+  text-align: $pos_center;
 
   img {
-    margin: 10px 0;
+    margin: $space_10 0;
     height: $img_hw;
     width: $img_hw;
     cursor: pointer;
@@ -32,7 +32,7 @@
     padding: 0;
 
     h4 {
-      margin-bottom: 10px;
+      margin-bottom: $space_10;
     }
   }
 }

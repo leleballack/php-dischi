@@ -33,17 +33,24 @@ header {
 
 .find_details select {
   height: 30px;
-  background-color: grey;
-  outline-color: grey;
+  padding: 0 10px;
+  background-color: green;
+  outline-color: green;
+  border-radius: 5%;
   outline: none;
+}
+
+.find_details select:hover {
+  background-color: green;
 }
 
 .find_details button {
   height: 30px;
+  padding: 0 10px;
   margin: 0 10px;
-  background-color: grey;
+  background-color: green;
   cursor: pointer;
-  border: grey;
+  border: green;
   border-radius: 5%;
   outline: none;
 }

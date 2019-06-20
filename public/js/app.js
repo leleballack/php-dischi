@@ -10718,6 +10718,8 @@ $(function () {
       alert("There is an error!");
     }
   });
+  /*fine ajax*/
+
   $("select.name").change(function () {
     var selected_artist = $(this).val();
     $("select.name").val("");
@@ -10736,7 +10738,22 @@ $(function () {
     });
     /*fine ajax*/
   });
-  /*fine jquery*/
+  /*fine jquery select*/
+
+  $(".by_year").click(function () {
+    $.ajax({
+      "url": url_php + "sort_by_year.php",
+      "method": "GET",
+      "success": function success(info) {
+        print_albums(info);
+      },
+      "error": function error() {
+        alert("There is an error!");
+      }
+    });
+    /*fine ajax*/
+  });
+  /*fine jquery button*/
 
   function print_albums(cover) {
     var source_album = $(album_template).html();

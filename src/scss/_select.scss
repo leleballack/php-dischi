@@ -1,22 +1,29 @@
 .find_details {
   margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
+  margin-top: $space_10*5;
 
   select {
-    height: 30px;
-    background-color: grey;
-    outline-color: grey;
+    height: $btn_slt_height;
+    padding: 0 $space_10;
+    background-color: $btn_slt_colour;
+    outline-color: $btn_slt_colour;
+    border-radius: 5%;
     outline: none;
+    &:hover {
+      background-color: $btn_slt_colour;
+    }
   }
 
   button {
-    height: 30px;
-    margin: 0 10px;
-    background-color: grey;
+    height: $btn_slt_height;
+    padding: 0 $space_10;
+    margin: 0 $space_10;
+    background-color: $btn_slt_colour;
     cursor: pointer;
-    border: grey;
+    border: $btn_slt_colour;
     border-radius: 5%;
     outline: none;
+
   }
 }

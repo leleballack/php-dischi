@@ -22,9 +22,9 @@
         <select class="name" name="artist">
           <option selected hidden value="">Select Artist</option>
         </select>
-        <button type="button" name="button">Sort by artist <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
-        <button type="button" name="button">Sort by title <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
-        <button type="button" name="button">Sort by year <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
+        <!-- <button type="button" name="button">Sort by artist <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button> -->
+        <!-- <button type="button" name="button">Sort by title <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button> -->
+        <button class="by_year">Sort by year <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
       </div>
     </section>
 
