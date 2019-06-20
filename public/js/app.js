@@ -10719,16 +10719,16 @@ $(function () {
     }
   });
   $("select.name").change(function () {
-    var selected_artist = $("select.name").val();
+    var selected_artist = $(this).val();
     $("select.name").val("");
     $.ajax({
       "url": url_php + "artist_filter.php",
-      "method": "GET",
+      "method": "POST",
       "data": {
-        "artist": selected_artist
+        "artist_name": selected_artist
       },
       "success": function success(reply) {
-        console.log(reply);
+        print_albums(reply);
       },
       "error": function error() {
         alert("There is an error!");
@@ -10741,6 +10741,7 @@ $(function () {
   function print_albums(cover) {
     var source_album = $(album_template).html();
     var template = Handlebars.compile(source_album);
+    $(".container").html("");
     var list_albums = JSON.parse(cover);
 
     for (var d = 0; d < list_albums.length; d++) {

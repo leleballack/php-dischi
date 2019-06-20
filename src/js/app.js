@@ -18,28 +18,29 @@ $(function () {
   });
 
   $("select.name").change(function() {
-    var selected_artist = $("select.name").val();
+    var selected_artist = $(this).val();
     $("select.name").val("");
 
-      $.ajax ({
-        "url": url_php + "artist_filter.php",
-        "method": "GET",
-        "data": {
-          "artist": selected_artist
-        },
-        "success": function (reply) {
-          console.log(reply);
-        },
-        "error": function() {
-          alert("There is an error!")
-        }
-      }); /*fine ajax*/
+    $.ajax ({
+      "url": url_php + "artist_filter.php",
+      "method": "POST",
+      "data": {
+        "artist_name": selected_artist
+      },
+      "success": function (reply) {
+        print_albums(reply);
+      },
+      "error": function() {
+        alert("There is an error!")
+      }
+    }); /*fine ajax*/
   });/*fine jquery*/
 
   function print_albums(cover) {
     var source_album = $(album_template).html();
     var template = Handlebars.compile(source_album);
 
+    $(".container").html("");
     var list_albums = JSON.parse(cover);
     for (var d = 0; d < list_albums.length; d++) {
       var album = list_albums[d];
