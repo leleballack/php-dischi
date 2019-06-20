@@ -17,16 +17,18 @@
         <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
       </div>
     </header>
-    
-    <div class="container">
+    <section>
       <div class="find_details">
         <select class="name" name="artist">
           <option selected hidden value="">Select Artist</option>
         </select>
-        <button type="button" name="button">Sort by year <i class="fas fa-arrow-up"></i></button>
-        <button type="button" name="button">Sort by year <i class="fas fa-arrow-down"></i></button>
+        <button type="button" name="button">Sort by artist <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
+        <button type="button" name="button">Sort by title <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
+        <button type="button" name="button">Sort by year <i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i></button>
       </div>
-    </div>
+    </section>
+
+    <div class="container"></div>
 
     <script id="album_template" type="text/x-handlebars-template">
       <div class="albums">

@@ -3,6 +3,9 @@
   margin: 50px auto;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .albums {
@@ -16,15 +19,18 @@
   height: $img_hw + 100px;
   background-color: $black;
   text-align: center;
+
   img {
     margin: 10px 0;
     height: $img_hw;
     width: $img_hw;
     cursor: pointer;
   }
+
   .specifics {
     color: white;
     padding: 0;
+
     h4 {
       margin-bottom: 10px;
     }

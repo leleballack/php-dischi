@@ -25,6 +25,12 @@ header {
   cursor: pointer;
 }
 
+.find_details {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
 .find_details select {
   height: 30px;
   background-color: grey;
@@ -47,6 +53,9 @@ header {
   margin: 50px auto;
   font-family: "Roboto", sans-serif;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .albums {

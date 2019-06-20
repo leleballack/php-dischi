@@ -1,5 +1,4 @@
 <?php
-
 $albums = [
   [
     "pic" => "https://images-na.ssl-images-amazon.com/images/I/61hw9WloObL._SY355_.jpg",
@@ -44,6 +43,12 @@ $albums = [
     "year" => "1974"
   ],
   [
+    "pic" => "https://images-na.ssl-images-amazon.com/images/I/71g40mlbinL._SX355_.jpg",
+    "title" => "Live at Wembley 1986",
+    "artist" => "Queen",
+    "year" => "1986"
+  ],
+  [
     "pic" => "https://static.lafeltrinelli.it/static/images-3/xl/457/8864457.jpg",
     "title" => "Appetite for Destruction",
     "artist" => "Guns N' Roses",
@@ -56,16 +61,16 @@ $albums = [
     "year" => "1971"
   ],
   [
-    "pic" => "https://images-na.ssl-images-amazon.com/images/I/51O1R0wj00L._PJautoripBadge,BottomRight,4,-40_OU11__.jpg",
+    "pic" => "https://images-na.ssl-images-amazon.com/images/I/51O1R0wj00L.jpg",
     "title" => "In Utero",
     "artist" => "Nirvana",
     "year" => "1993"
+  ],
+  [
+    "pic" => "https://images-na.ssl-images-amazon.com/images/I/71DQrKpImPL._SY355_.jpg",
+    "title" => "Nevermind",
+    "artist" => "Nirvana",
+    "year" => "1991"
   ]
 ];
-
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-  echo json_encode($albums);
-};
-
-
 ?>
